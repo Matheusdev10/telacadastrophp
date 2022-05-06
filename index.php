@@ -3,7 +3,6 @@
 <html lang="pt-br">
 
 <head>
-   <!-- Required meta tags -->
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <!-- Bootstrap CSS -->
@@ -12,11 +11,16 @@
   
 
 <style>
+   body{
+      background-color: #00CED1;
+   }
    h2{
     text-align: center;
+    color: 	#2F4F4F;
     
 }
 .container{
+   
   
     height: 100vh;
  
@@ -30,6 +34,8 @@
 }
 
 .card-body{
+   background-color: #B0C4DE;
+
     padding: 50px 50px 100px 50px;
   
 }

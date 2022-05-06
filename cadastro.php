@@ -4,7 +4,12 @@
 VALUES
 (valor_coluna1, valor_coluna2, ..., valor_colunaN) -->
 
+
+
 <?php
+// conectando com o banco
+include_once 'includes/db_user.php';
+
 
 // pegando variaveis do html
 $firstName = isset($_GET['firstName']) ? $_GET['firstName']: null;
@@ -13,20 +18,8 @@ $cpf = isset($_GET['cpf']) ? $_GET['cpf']: null;
 $date = isset($_GET['date']) ? $_GET['date']: null;
 
 
-// conectando com o banco
-$hostName = "localhost";
-$userName = "root";
-$password = "";
-$dataBaseName="db_user";
-$mysqli = new mysqli($hostName, $userName, $password, $dataBaseName);
-if (!$mysqli) {
-    die('Não foi possível conectar: ' . mysql_error());
-};
-
-
-
-
 // salvando dados no banco 
+// mysqli Executa uma consulta no banco de dados
 $query = "INSERT INTO users (firstName, lastName, cpf, date) VALUES ('$firstName', '$lastName', '$cpf', '$date');";
 $result = $mysqli->query($query);
 
