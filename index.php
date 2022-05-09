@@ -6,65 +6,22 @@
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <!-- Bootstrap CSS -->
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  
-
-<style>
-   body{
-      background-color: #00CED1;
-   }
-   h2{
-    text-align: center;
-    color: 	#2F4F4F;
-    
-}
-.container{
-   
-  
-    height: 100vh;
- 
-}
-#form-input{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
- 
-}
-
-.card-body{
-   background-color: #B0C4DE;
-
-    padding: 50px 50px 100px 50px;
-  
-}
-
-#btn{
- 
-    width: 100%;
-   
-
-}
-.input-group{
-    margin-bottom: 20px;
-}
-
-</style>
-
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+   <link rel="stylesheet" href="./styles/index.css">
 </head>
 
 <body>
-   <div class="container ">
+   <div class="container">
+      
       <!-- -------------------------código-------------------------- -->
-      <form id="form-input" method="get" action="cadastro.php">
+      <form id="form-input" method="get" action="cadastro.php" name="formulario">
          <div id="card-input" class="card">
             <div class="card-body">
                <h2 class="card-title">Tela de cadastro</h2>
                <div class="card-content mt-5">
                   <div class="row">
                      <div class="input-group col">
-                        <input type="text" class="form-control" placeholder="Nome" name="firstName">
+                        <input type="text" class="form-control" placeholder="Nome" name="firstName" required="">
                      </div>
                      <div class="input-group col">
                         <input type="text" class="form-control" placeholder="Sobrenome" name="lastName">
@@ -72,7 +29,7 @@
                   </div>
                   <div class="row">
                      <div class="input-group col">
-                        <input type="text" class="form-control" placeholder="CPF" name="cpf">
+                        <input type="text" class="form-control" placeholder="CPF" name="cpf" required=""  >
                      </div>
                      <div class="input-group col">
                         <input type="text" class="form-control" placeholder="Data de nascimento" name="date">

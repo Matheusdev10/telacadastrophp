@@ -1,0 +1,18 @@
+
+    strong{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: red;
+        height: 600px;
+        font-size: 25px;
+        background-color: black;
+        margin: auto;
+        padding: auto;
+    }
+    a{
+        text-decoration: none;
+        font-size: 25px;
+        color: red;
+
+    }

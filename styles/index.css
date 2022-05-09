@@ -1,0 +1,38 @@
+body{
+    background-color: #00CED1;
+}
+h2{
+  text-align: center;
+  color: 	#2F4F4F;
+  
+}
+.container{
+ 
+
+  height: 100vh;
+
+}
+#form-input{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+}
+
+.card-body{
+ background-color: #B0C4DE;
+
+  padding: 50px 50px 100px 50px;
+
+}
+
+#btn{
+
+  width: 100%;
+ 
+
+}
+.input-group{
+  margin-bottom: 20px;
+}
