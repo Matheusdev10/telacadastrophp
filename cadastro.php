@@ -24,7 +24,7 @@ VALUES
 // conectando com o banco
 include_once 'includes/db_user.php';
 
-
+include_once 'erro.php';
 
 
 // pegando variaveis do html
@@ -33,11 +33,20 @@ $lastName = isset($_GET['lastName']) ? $_GET['lastName']: null;
 $cpf = isset($_GET['cpf']) ? $_GET['cpf']: null;
 $date = isset($_GET['date']) ? $_GET['date']: null;
 
-if($firstName == "" || $cpf == "")
-echo "<strong> VOCE NÃO PODE CADASTRAR POIS, PRIMEIRO NOME E CPF SÃO CAMPOS OBRIGATÓRIOS </strong> <a href=index.php>VOLTAR</a>";
-else{
-    echo header("Location: listarusuarios.php");
+
+
+if($firstName == "" || $cpf == ""){
+// header("Location: index.php");
+$erro = '<script>alert("nome e cpf são campos obrigatórios");</script>';
+
+}else{
+$dataCadasto = date ('d/m/Y');
+$query = "INSERT INTO users (firstName, lastName, cpf, date, dataCadastro) VALUES ('$firstName', '$lastName', '$cpf', '$date', '$dataCadastro');";
+$result = $mysqli->query($query);
+header("Location: listarusuarios.php");
 }
+
+// }
 
 
 
@@ -45,10 +54,10 @@ else{
 // mysqli Executa uma consulta no banco de dados
 
 
-$dataCadastro = date('d/m/Y');
-$query = "INSERT INTO users (firstName, lastName, cpf, date, dataCadastro) VALUES ('$firstName', '$lastName', '$cpf', '$date', '$dataCadastro');";
-$result = $mysqli->query($query);
 
 
+// redirecionando para a tela
 
+
+// query params php ( passagem de parametros ( passar uma varivel de um arquivo para outro))
 ?>
